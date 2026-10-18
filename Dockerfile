@@ -30,6 +30,6 @@ RUN apt-get update && apt-get install -y \
 RUN useradd -ms /bin/bash builder
 USER builder
 
-WORKDIR /
+WORKDIR /home/builder
 RUN git clone https://gitlab.com/buildroot.org/buildroot.git -b 2026.08
-WORKDIR /buildroot
+WORKDIR /home/builder/buildroot
